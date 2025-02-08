@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //Connecting to MongoDB
-mongoose.connect("mongodb+srv://ayush23:mongodb12345@cluster0.ohxta.mongodb.net/paytm")
+mongoose.connect(`${process.env.MONGODB_URL}`)
 
 // Create a schema for the user
 const userSchema = mongoose.Schema({
